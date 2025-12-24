@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历 | 张笑言</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(120deg, #eef4ff, #ffffff);
+            color: #333;
+        }
+
+        /* ===== 导航栏 ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        nav h1 {
+            font-size: 22px;
+            color: #2c6bed;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2c6bed;
+        }
+
+        /* ===== 通用区域 ===== */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2c6bed;
+            border-left: 6px solid #2c6bed;
+            padding-left: 15px;
+        }
+
+        /* ===== 首页介绍 ===== */
+        .hero {
+            padding-top: 140px;
+            text-align: center;
+        }
+
+        .hero h3 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* ===== 基本信息 ===== */
+        .profile {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 260px;
+            background: #e3ecff;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .info span {
+            font-weight: bold;
+        }
+
+        /* ===== 卡片通用 ===== */
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* ===== 实习时间线 ===== */
+        .timeline {
+            border-left: 3px solid #2c6bed;
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+        }
+
+        .timeline-item h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* ===== 技能 ===== */
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .bar {
+            background: #eee;
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #2c6bed, #6aa5ff);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>张笑言 · 简历</h1>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#info">基本信息</a></li>
+                <li><a href="#award">获奖情况</a></li>
+                <li><a href="#experience">实习经历</a></li>
+                <li><a href="#skill">个人能力</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h3>个人简历</h3>
+        <p>
+            热爱数据分析与可视化，同时深度参与专业台球赛事，具备良好的执行力、
+            团队协作能力与赛事运营经验，追求技术与兴趣的双向发展。
+        </p>
+    </section>
+
+    <section id="info">
+        <h2>基本信息</h2>
+        <div class="profile">
+            <div class="avatar"><img src="1.jpg" alt="个人照片"></div>
+            <div class="info card">
+                <p><span>姓名：</span>张笑言</p>
+                <p><span>性别：</span>男</p>
+                <p><span>专业：</span>数据科学与大数据技术</p>
+                <p><span>学校：</span>大连海洋大学</p>
+                <p><span>政治面貌：</span>群众</p>
+                <p><span>联系电话：</span>10086</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="award">
+        <h2>获奖情况</h2>
+        <div class="grid">
+            <div class="card">全国大学生台球公开赛 9 球项目 亚军（2023）</div>
+            <div class="card">东北高校台球联赛 冠军（2022）</div>
+            <div class="card">乔氏中式台球城市挑战赛 大连站 季军</div>
+            <div class="card">辽宁省台球锦标赛 中式八球 前八名</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>实习 / 赛事经历</h2>
+        <div class="timeline card">
+            <div class="timeline-item">
+                <h4>全国毒牙台球系列赛</h4>
+                <p>负责赛事数据统计、选手对接及现场秩序维护。</p>
+            </div>
+            <div class="timeline-item">
+                <h4>乔氏大师赛</h4>
+                <p>参与赛事执行、赛程安排及媒体协助工作。</p>
+            </div>
+            <div class="timeline-item">
+                <h4>商业台球赛事</h4>
+                <p>担任台球宝贝</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skill">
+        <h2>个人能力</h2>
+        <div class="card">
+            <div class="skill">
+                <p>HTML / CSS</p>
+                <div class="bar"><span style="width: 85%"></span></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript 基础</p>
+                <div class="bar"><span style="width: 70%"></span></div>
+            </div>
+            <div class="skill">
+                <p>数据分析 & Excel</p>
+                <div class="bar"><span style="width: 80%"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 张笑言 · 个人简历网站
+    </footer>
+
+</body>
+
+</html>
